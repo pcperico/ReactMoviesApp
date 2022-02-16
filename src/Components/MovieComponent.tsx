@@ -7,11 +7,11 @@ export default function MovieComponent(props:SingleMovieProps)
     return(
       <div className={css.div}> 
           <a href={buildLink()}>
-              <img src={props.movie.poster} alt="Poster" />
-              <p>
-                  <a href={buildLink()}>{props.movie.title}</a>
-              </p>
+              <img src={props.movie.poster} alt="Poster" />              
           </a>
+          <p>
+            <a href={buildLink()}>{props.movie.title}</a>
+          </p>
       </div>
   );
 }

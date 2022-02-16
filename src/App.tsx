@@ -1,19 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import HelloWorld from './Components/HelloWorld';
-import MovieComponent from './Components/MovieComponent';
 import { Movie } from './Models/Movie.models';
+import ListMoviesComponent from './Components/ListMoviesComponent';
 
 function App() {
-const movieTest:Movie={
-id:1,
-title:"Iron Man",
-poster:"https://i.blogs.es/7e29c1/ironmanposterint/1366_2000.jpg"
-}
+  const movies: Movie[]=[
+    {
+      id:1,
+      title:"Iron Man",
+      poster:"https://i.blogs.es/7e29c1/ironmanposterint/1366_2000.jpg"
+      },
+      {
+        id:2,
+        title:"Iron Man 2",
+        poster:"https://movieposters2.com/images/1682646-b.jpg"
+        },
+        {
+          id:3,
+          title:"Iron Man 3",
+          poster:"https://m.media-amazon.com/images/I/61Wfz2Zd2sL._AC_SL1005_.jpg"
+          }
+  ];
 
   return (
-    <MovieComponent movie={movieTest} />
+    <ListMoviesComponent movies={movies} />
   );
 }
 
