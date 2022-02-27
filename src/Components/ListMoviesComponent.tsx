@@ -1,29 +1,19 @@
 import {Movie} from "../Models/Movie.models";
 import MovieComponent from "./MovieComponent";
 import css from "../Css/ListMovie.module.css";
-import LoadingComponent from "./LoadingComponent";
+
+import GenericListComponent from "./GenericListComponent";
 export default function ListMoviesComponent(props: moviesListProps)
-{
-    if(!props.movies)
-    {
-        return (<LoadingComponent />);
-    }
-    else if(props.movies.length===0)
-    {
-        return (<span>No data to show</span>)
-    }
-    else
-    {
-        return (
+{    
+    return (
+        <GenericListComponent list={props.movies}>
             <div className={css.div}>
-                {
-                    props.movies.map(m=>
-                        <MovieComponent movie={m} key={m.id}/>
-                    )
-                }
+            {
+                props.movies?.map(m=><MovieComponent movie={m} key={m.id}/>)
+            }
             </div>
-        );
-    }    
+            </GenericListComponent>            
+        );        
 }
 
 interface moviesListProps
