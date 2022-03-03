@@ -1,9 +1,7 @@
 import './App.css';
 import MenuComponent from './Components/MenuComponent';
 import {Switch,Route} from 'react-router';
-import GendersIndex from './Components/GendersIndex';
 import {BrowserRouter} from 'react-router-dom';
-import LandingPage from './Components/LandingPage';
 import routes from './route-config';
 function App() {
   

@@ -9,7 +9,13 @@ export default function MenuComponent()
                 <div className="collapse navbar-collapse">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
+                            <NavLink className="nav-link" to="/movies/filter" activeClassName={activeClass} >Movies</NavLink>
+                        </li>
+                        <li className="nav-item">
                             <NavLink className="nav-link" to="/genders" activeClassName={activeClass} >Genders</NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink className="nav-link" to="/actors" activeClassName={activeClass} >Actors</NavLink>
                         </li>
                     </ul>
                 </div>
