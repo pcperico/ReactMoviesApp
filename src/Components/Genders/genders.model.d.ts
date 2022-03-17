@@ -1,3 +1,10 @@
 export interface createGenderDto{
-    name:string
+    name:string,
+    description:string
+}
+
+export interface GenderDto{
+    id:number,
+    name:string,
+    description:string
 }

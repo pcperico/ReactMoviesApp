@@ -21,6 +21,8 @@ export default function GendersForm (props:gendersFormProps){
                     <Form>
                         <FormGroupText field="name" label="Name" placeholder="Gender name" />
                         <br />
+                        <FormGroupText field="description" label="Description" placeholder="Description Gender" />
+                        <br />
                         <Button disabled = {formikProps.isSubmitting} type="submit" >Save</Button>
                         <Link className="btn btn-secondary" to="/genders" >Cancel</Link>                    
                     </Form>
