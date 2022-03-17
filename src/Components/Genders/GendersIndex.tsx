@@ -12,8 +12,16 @@ export default function GendersIndex()
     const [genderList, setGenderList]= useState<GenderDto[]>();   
     useEffect(()=>{       
         axios.get(urlGenders)
-        .then((respone:AxiosResponse<GenderResultModel>)=>{         
-            setGenderList(respone.data.content);           
+        .then((response:AxiosResponse<GenderResultModel>)=>{    
+            if(response.data.success)
+            {
+                setGenderList(response.data.content);
+            }
+            else{
+                setGenderList([]);
+                console.log(`Not able to get genders due: ${response.data.message}` );
+            }     
+                       
         })
     },[]);
     return (

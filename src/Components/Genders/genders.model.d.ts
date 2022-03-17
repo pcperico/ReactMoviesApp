@@ -3,8 +3,8 @@ export interface createGenderDto{
     description:string
 }
 
-export interface GenderDto{
-    id:number,
-    name:string,
+export class GenderDto{
+    id:number;
+    name:string;
     description:string
 }
